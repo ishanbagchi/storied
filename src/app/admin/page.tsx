@@ -16,9 +16,6 @@ const getSalesData = async () => {
 		_count: true,
 	})
 
-	// wait for 2 seconds
-	await new Promise((resolve) => setTimeout(resolve, 2000))
-
 	return {
 		amount: data._sum.priceInRupees || 0,
 		numberOfSales: data._count,
